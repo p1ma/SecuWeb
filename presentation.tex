@@ -2,7 +2,7 @@
 
 \mode<presentation>
 {
-	\usetheme{Warsaw}
+	\usetheme{Juanlespins}
 	\usecolortheme{default}
 	\usefonttheme{serif}
 	\setbeamertemplate{navigation symbols}{}
@@ -14,29 +14,139 @@
 
 
 % Presentation informations
-\title{Sécurité WEB et audit}
+\title{Sécurité Web et audit}
 \author{P. Junges, F.Nosari}
 \institute{Faculté des Sciences et Technologies}
 \date{\today}
 
 \begin{document}
-	
-	\begin{frame}
+
+\begin{frame}
 	\titlepage
 \end{frame}
 
-% Table of contents
 \begin{frame}{Sommaire}
-\tableofcontents
+	\tableofcontents
 \end{frame}
 
 \section{Introduction}
+	\begin{frame}{Introduction}
+		\begin{itemize}
+			\item %TODO
+		\end{itemize}
+	\end{frame}
 
-\begin{frame}{Introduction}
-\begin{itemize}
-\item %TODO
+\section{Audit de sécurité}
+	\subsection{Présentation}
+	\begin{frame}{Présentation}
+		\begin{itemize}
+			\item Vue à un instant T de la sécurité d'un système
+			\item Pratique encadré légalement
+			\item Comparaison à un référentiel (loi, politique interne, références)
+		\end{itemize}
+	\end{frame}
+	\subsection{Motivations}
+	\begin{frame}{Motivations}
+		\begin{itemize}
+			\item Réagir à une attaque
+			\item Se faire une bonne idée du niveau de sécurité du SI
+			\item Tester la mise en place effective de la politique de sécurité ;
+			\item Tester un nouvel équipement ou une nouvelle application
+			\item Évaluer l'évolution de la sécurité (audit périodique).
+		\end{itemize}
+	\end{frame}
+	\subsection{Pratiques}
+	\begin{frame}{Pratiques}
+		\begin{itemize}
+			\item Interviews
+			\item Tests d'intrusion
+			\item Relevés de configuration
+			\item Audit de code
+			\item Fuzzing
+		\end{itemize}
+	\end{frame}
+	\subsection{Outils}
+	\begin{frame}{Outils}
+		\begin{itemize}
+			\item OS dédiés (Kali, Pentoo, Black Arch, etc)
+			\item Logiciels dédiés
+			\item Tests spécifiques			
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{Outils - Web}
+	\begin{itemize}
+		\item W3AF
+		\item Metasploit
+		\item OWASP Zap			
+	\end{itemize}
+	\end{frame}
 
-\end{itemize}
-\end{frame}
+\section{Open Web Application Security Project (OWASP)}
+	\subsection{Présentation}
+	\begin{frame}{Présentation}
+		\begin{itemize}
+			\item Open Web Application Security Project
+			\itemp Les dix risques de sécurité des applications Web les plus critiques		
+		\end{itemize}
+	\end{frame}
+	
+	\subsection{Top 10}
+	\begin{frame}{1. Injection}
+		\begin{itemize}
+			\item %TODO
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{2. Broken Authentication and Session Management}
+		\begin{itemize}
+			\item %TODO
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{3. XSS (Cross site scripting)}
+		\begin{itemize}
+			\item %TODO
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{4. Broken Access Control}
+		\begin{itemize}
+			\item %TODO
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{5. Security Misconfiguration}
+		\begin{itemize}
+		\item %TODO
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{6. Sensitive Data Exposure}
+		\begin{itemize}
+			\item %TODO
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{7. Insufficient Attack Protection}
+		\begin{itemize}
+			\item %TODO
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{8. CSRF (Cross-Site Request Forgery)}
+		\begin{itemize}
+			\item %TODO
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{9. Using Components with Known Vulnerabilities}
+		\begin{itemize}
+			\item %TODO
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{10. Underprotected APIs}
+		\begin{itemize}
+			\item %TODO
+		\end{itemize}
+	\end{frame}
+	
+\section{Notes pour trop tard}
+	\begin{frame}{Notes pour trop tard}
+		\begin{itemize}
+			\item %TODO
+		\end{itemize}
+	\end{frame}
 
 \end{document}
