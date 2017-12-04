@@ -9,9 +9,10 @@
 	\setbeamertemplate{caption}[numbered]
 } 
 
-\usepackage[francais]{babel}
+\usepackage[french]{babel}
 \usepackage[utf8x]{inputenc}
-
+\usepackage{comment}
+\newcommand{\colorized}[1]{{\color{red}{#1}}}
 
 % Presentation informations
 \title{Sécurité Web et audit}
@@ -25,179 +26,90 @@
 	\titlepage
 \end{frame}
 
+\begin{frame}{Introduction}
+	\begin{itemize}
+		\item Audit de Sécurité
+		\item X
+		\item Sécurité Web
+		\item = 
+		\item Audit de sécurité d'une application web
+	\end{itemize}
+\end{frame}
+
 \begin{frame}{Sommaire}
 	\tableofcontents
 \end{frame}
 
-\section{Introduction}
-	\begin{frame}{Introduction}
-		\begin{itemize}
-			\item %TODO
-		\end{itemize}
-	\end{frame}
 
-% Mon avis
-\begin{comment}
-	Ca me semble "complet" mais si on doit faire 15 mins de pres
-	on risque de prendre pas mal de temps sur cette partie
-
-	I Audit de sécurité
-		Definition
-			donner def + norme ISO
-		Pré requis pour l'audit
-			6 principes à respecter
-		Preparer l’audit
-			expliquer graphique de la page 5 de la norme ISO
-		Execution de l’audit
-			tests d'intrusion
-				def boite blanche, noire, grise
-				outils d'intrusion
-			test de vulnerabilites
-				Outils de tests de vulnerabilites
-		Conclure audit
-			donner recommendations sur ce qu'il faut changer etc
-
-	En y réfléchissant on aurait moyen de faire notre presentation sur une seule partie
-	qui serait donc la partie Audit de sécurité (pour un site web) et ensuite toute la partie
-	faille(injection etc.) on en parlerai dans la partie Execution de l'audit.
-	
-	Réponse (Flo):
-	
-	Je pense que l'on ne peut pas juste faire sur l'audit car il y a l'aspect sécurité web. 
-	Ton plan me parrait pas mal, c'est en gros ce que j'ai mis avec plus de détails donc j'aime bien.
-	Je me demande ce que l'on va faire exactement comme démo.
-	
-	On peut essayé de faire un truc complet et on essaie de négocier 10 minutes de plus.
-
-	Réponse (Pima):
-	(mon clavier double les lettres qq fois, donc fait pas attention)
-
-	Je pense que pour négocier du temps, c'est un peu cheaté^^.
-	
-	Ensuite, pour reparler de ta remarque: "Je pense que l'on ne peut pas juste faire sur l'audit car il y a l'aspect sécurité web".
-
-	Justement, si au lieu de faire une présentation sur Secu Web et audit, on faisait plutot, audit de sécurité d'une application web. 
-	On a ton site (le truc .co.uk), on suppose que c'est notre "client", et nous notre role s'est de faire justement l'audit de sécurité de ce site. Et donc dès qu'on arrive a la partie Execution de l'audit, on explique donc les vulnérabilités web connus (les trucs de l'owasp) et on fait les démos directement sur ce site de notre "client" en expliquant les outils utilisés etc..
-
-	Donc en quelque sorte ca sera un exposé/démonstration en situation pseudo réelle.
-	
-
-\end{comment}
-% /Mon avis
-
-\section{Audit de sécurité}
-	\subsection{Présentation}
-	\begin{frame}{Présentation}
+\section{Initier l'audit}
+	\subsection{Termes et definitions}
+	\begin{frame}{Termes et definitions}
 		\begin{itemize}
 			\item Vue à un instant T de la sécurité d'un système
-			\item Pratique encadré légalement
+			\item Pratique encadré légalement (accord avec l'audité)
 			\item Comparaison à un référentiel (loi, politique interne, références)
+			\item Action ponctuelle
 		\end{itemize}
-	\end{frame}
-	\subsection{Motivations}
-	\begin{frame}{Motivations}
-		\begin{itemize}
-			\item Réagir à une attaque
-			\item Se faire une bonne idée du niveau de sécurité du SI
-			\item Tester la mise en place effective de la politique de sécurité ;
-			\item Tester un nouvel équipement ou une nouvelle application
-			\item Évaluer l'évolution de la sécurité (audit périodique).
-		\end{itemize}
-	\end{frame}
-	\subsection{Pratiques}
-	\begin{frame}{Pratiques}
-		\begin{itemize}
-			\item Interviews
-			\item Tests d'intrusion
-			\item Relevés de configuration
-			\item Audit de code
-			\item Fuzzing
-		\end{itemize}
-	\end{frame}
-	\subsection{Outils}
-	\begin{frame}{Outils}
-		\begin{itemize}
-			\item OS dédiés (Kali, Pentoo, Black Arch, etc)
-			\item Logiciels dédiés
-			\item Tests spécifiques			
-		\end{itemize}
-	\end{frame}
-	\begin{frame}{Outils - Web}
-	\begin{itemize}
-		\item W3AF
-		\item Metasploit
-		\item OWASP Zap	
-		\item SQLMap
-		\item beEF XSS Framework
-	\end{itemize}
 	\end{frame}
 
-\section{Open Web Application Security Project (OWASP)}
-	\subsection{Présentation}
-	\begin{frame}{Présentation}
+
+	\subsection{Principes à respecter}
+	\begin{frame}{Principes à respecter}
 		\begin{itemize}
-			\item Open Web Application Security Project
-			\itemp Les dix risques de sécurité des applications Web les plus critiques		
+			\item Intégrité
+			\item Précision
+			\item Professionnalisme
+			\item Confidentialité
+			\item Impartialité
+			\item Approche factuelle
 		\end{itemize}
-	\end{frame}
 	
-	\subsection{Top 10}
-	\begin{frame}{1. Injection}
-		\begin{itemize}
-			\item %TODO
-		\end{itemize}
 	\end{frame}
-	\begin{frame}{2. Broken Authentication and Session Management}
+
+
+	\subsection{Mise en place}
+	\begin{frame}{Mise en place}
+	     Contact avec l'audité (réunion) : 
 		\begin{itemize}
-			\item %TODO
-		\end{itemize}
+			\item Objectif
+			\item Porté
+			\item Méthodes (boite blanche/noire)
+			\item Composition de l'équipe
+			\item Demandes techniques et administratives
+			\item Définition des échéances
+			\item Confirmation légale
+		\end{itemize}		
 	\end{frame}
-	\begin{frame}{3. XSS (Cross site scripting)}
+
+	\subsection{Mise en place}
+		\begin{frame}{Mise en place}
+		Contact avec l'audité (réunion) : 
 		\begin{itemize}
-			\item %TODO
-		\end{itemize}
+			\item Objectif \colorized{Connaitre le failles pour pouvoir les corriger}
+			\item Porté \colorized{Application web / OWASP Top 10}
+			\item Méthodes \colorized{Boite blanche}
+			\item Composition de l'équipe
+			\item Demandes techniques et administratives \colorized{code source}
+			\item Définition des échéances \colorized{\today}
+			\item Confirmation légale
+		\end{itemize}		
 	\end{frame}
-	\begin{frame}{4. Broken Access Control}
-		\begin{itemize}
-			\item %TODO
-		\end{itemize}
-	\end{frame}
-	\begin{frame}{5. Security Misconfiguration}
-		\begin{itemize}
-		\item %TODO
-		\end{itemize}
-	\end{frame}
-	\begin{frame}{6. Sensitive Data Exposure}
-		\begin{itemize}
-			\item %TODO
-		\end{itemize}
-	\end{frame}
-	\begin{frame}{7. Insufficient Attack Protection}
-		\begin{itemize}
-			\item %TODO
-		\end{itemize}
-	\end{frame}
-	\begin{frame}{8. CSRF (Cross-Site Request Forgery)}
-		\begin{itemize}
-			\item %TODO
-		\end{itemize}
-	\end{frame}
-	\begin{frame}{9. Using Components with Known Vulnerabilities}
-		\begin{itemize}
-			\item %TODO
-		\end{itemize}
-	\end{frame}
-	\begin{frame}{10. Underprotected APIs}
-		\begin{itemize}
-			\item %TODO
-		\end{itemize}
-	\end{frame}
-	
-\section{Notes pour trop tard}
-	\begin{frame}{Notes pour trop tard}
-		\begin{itemize}
-			\item %TODO
-		\end{itemize}
-	\end{frame}
+
+
+\section{Execution de l'audit}	
+	\subsection{}
+		\begin{frame}{Mise en place}
+			Différentes pratiques existent : 
+			\begin{itemize}
+				\item Interviews 
+				\item Tests d'intrusion
+				\item Relevés de configuration
+				\item Audit de code
+				\item Fuzzing				
+			\end{itemize}		
+		\end{frame}
+
+
+
 
 \end{document}
