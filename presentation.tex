@@ -2,46 +2,69 @@
 
 \mode<presentation>
 {
-	\usetheme{Juanlespins}
+	\usetheme{Madrid}
 	\usecolortheme{default}
 	\usefonttheme{serif}
 	\setbeamertemplate{navigation symbols}{}
 	\setbeamertemplate{caption}[numbered]
-} 
+
+\makeatother
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle\hspace*{16em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+\makeatletter
+
+}
 
 \usepackage[french]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage{comment}
 \newcommand{\colorized}[1]{{\color{red}{#1}}}
 
+
 % Presentation informations
 \title{Sécurité Web et audit}
-\author{P-M. Junges, F.Nosari}
-\institute{Faculté des Sciences et Technologies}
+\author{Pierre-Marie JUNGES, Florent NOSARI}
+\institute[UL] {
+	Université de Lorraine \\
+}
+
 \date{\today}
 
 \begin{document}
 
-\begin{frame}
-	\titlepage
-\end{frame}
+\setbeamertemplate{headline}{}
+  \begin{frame}
+  	\titlepage 
+  \end{frame}
 
 \begin{frame}{Introduction}
 	\begin{itemize}
 		\item Audit de Sécurité
-		\item X
+		\item +
 		\item Sécurité Web
 		\item = 
 		\item Audit de sécurité d'une application web
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Sommaire}
+\begin{frame}{Plan}
 	\tableofcontents
 \end{frame}
 
 
 \section{Initier l'audit}
+
 	\subsection{Termes et definitions}
 	\begin{frame}{Termes et definitions}
 		\begin{itemize}
@@ -81,8 +104,7 @@
 		\end{itemize}		
 	\end{frame}
 
-	\subsection{Mise en place}
-		\begin{frame}{Mise en place}
+	\begin{frame}{Mise en place}
 		Contact avec l'audité (réunion) : 
 		\begin{itemize}
 			\item Objectif \colorized{Connaitre le failles pour pouvoir les corriger}
@@ -98,14 +120,14 @@
 
 \section{Execution de l'audit}	
 	\subsection{}
-		\begin{frame}{Mise en place}
+		\begin{frame}{Execution de l'audit}
 			Différentes pratiques existent : 
 			\begin{itemize}
-				\item Interviews 
+				\item Audit organisationnel
 				\item Tests d'intrusion
 				\item Relevés de configuration
-				\item Audit de code
-				\item Fuzzing				
+				\item Audit de code source (Fuzzing)
+				\item Social engineering				
 			\end{itemize}		
 		\end{frame}
 
