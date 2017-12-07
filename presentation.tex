@@ -29,6 +29,8 @@
 \usepackage[french]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage{comment}
+\usepackage{graphicx}
+
 \newcommand{\colorized}[1]{{\color{red}{#1}}}
 
 
@@ -144,13 +146,18 @@
 	
 	\subsection{Tests d'intrusion} 
 		\begin{frame}{Outils utilisés}
-				%Images/logo			
+				    \begin{figure}
+        \centering
+        \begin{minipage}{.5\textwidth}
+            \centering
+            \includegraphics[width=.4\linewidth]{schemas/images/metasploit.png}
+            \caption{Metasploit}
+        \end{minipage}%
+        \begin{minipage}{.5\textwidth}
+            \centering
+            \includegraphics[width=.4\linewidth]{schemas/images/zap.png}
+            \caption{OWASP Zap}
+        \end{minipage}
+    \end{figure}	
 		\end{frame}
-		\begin{frame}{Outils utilisés}
-			%Images/logo			
-		\end{frame}
-
-
-
-
 \end{document}
