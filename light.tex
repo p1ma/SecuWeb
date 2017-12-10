@@ -133,6 +133,7 @@
 			\item Injection
 			\item Violation de gestion d'authentification et de session
 			\item Cross-Site Scripting (XSS) 
+			\item Violation de contrôle d’accès
 		\end{enumerate}
 	\end{block}
 \end{frame}
@@ -167,26 +168,43 @@
 		\centering
 		\begin{minipage}{.3\textwidth}
 			\centering
-			\includegraphics[width=.4\linewidth]{schemas/images/metasploit.png}
+			\includegraphics[width=.4\linewidth]{schemas/images/w3af.png}
 			\break
-			Metasploit
+			w3af
 		\end{minipage}%
+		\begin{minipage}{.3\textwidth}
+			\centering
+			\includegraphics[width=.4\linewidth]{schemas/images/brain.png}
+			\break 
+			Logique humaine
+		\end{minipage}
 		\begin{minipage}{.3\textwidth}
 			\centering
 			\includegraphics[width=.4\linewidth]{schemas/images/zap.png}
 			\break 
 			OWASP Zap
 		\end{minipage}
-		\begin{minipage}{.3\textwidth}
-			\centering
-			\includegraphics[width=.4\linewidth]{schemas/images/brain.png}
-			\break 
-			Logique humaine
-			% https://pixabay.com/en/brain-human-brain-knowledge-anatomy-155190/
-		\end{minipage}
 	\end{figure}	
 \end{frame}
-	  
+
+\subsection{Tests d'intrusion}
+\begin{frame}{Injection (OS)}
+\centering
+\includegraphics[width=\paperwidth]{schemas/images/injection.png}
+\end{frame}
+\begin{frame}{Violation de gestion d'authentification et de session}
+\centering
+\includegraphics[width=0.95\paperwidth ]{schemas/images/broken_auth.png}
+\end{frame}
+\begin{frame}{Violation de contrôle d’accès}
+\centering
+\includegraphics[width=\paperwidth ]{schemas/images/broken_ac.png}
+\end{frame}
+\begin{frame}{Cross-Site Scripting (XSS)}
+\centering
+\includegraphics[width=0.92\paperwidth ]{schemas/images/XSS.png}
+\end{frame}
+
 \section{Conclure un audit}	
 \subsection{Elaboration du rapport d'audit} 
 \begin{frame}{Elaboration du rapport d'audit}
@@ -226,6 +244,8 @@
 	Bientot remplacé par du Bug bounty?
 \end{frame}
 \begin{frame}{Références}
-	
+	Images: \\
+	\small{\url{pixabay.com/en/brain-human-brain-knowledge-anatomy-155190/}}
+	\small{\url{scanforsecurity.com/wp-content/uploads/2016/11/w3af_scanner.png}}
 \end{frame}
 \end{document}
