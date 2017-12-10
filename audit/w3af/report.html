@@ -1,0 +1,937 @@
+<HTML>
+<HEAD>
+<TITLE>
+w3af  -  Web Attack and Audit Framework - Vulnerability Report </TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<STYLE TYPE="text/css">
+<!--
+BODY {
+	BACKGROUND-COLOR: #ffffff
+}
+  A {	TEXT-DECORATION: none }
+  A:visited {	COLOR: #0000cf; TEXT-DECORATION: none }
+  A:link {	COLOR: #0000cf; TEXT-DECORATION: none }
+  A:active {	COLOR: #0000cf; TEXT-DECORATION: underline }
+  A:hover {	COLOR: #0000cf; TEXT-DECORATION: underline }
+  OL {	COLOR: #333333; FONT-FAMILY: tahoma,helvetica,sans-serif }
+  UL {	COLOR: #333333; FONT-FAMILY: tahoma,helvetica,sans-serif }
+  P {	COLOR: #333333; FONT-FAMILY: tahoma,helvetica,sans-serif }
+  BODY {	COLOR: #333333; FONT-FAMILY: tahoma,helvetica,sans-serif }
+  TD {	COLOR: #333333; FONT-FAMILY: tahoma,helvetica,sans-serif }
+  TR {	COLOR: #333333; FONT-FAMILY: tahoma,helvetica,sans-serif }
+  TH {	COLOR: #333333; FONT-FAMILY: tahoma,helvetica,sans-serif }
+  FONT.title {	BACKGROUND-COLOR: white; COLOR: #363636; FONT-FAMILY:                   tahoma,helvetica,verdana,lucida console,utopia; FONT-SIZE: 13pt; FONT-WEIGHT: bold }
+  FONT.sub {	BACKGROUND-COLOR: white; COLOR: #000000; FONT-FAMILY:                   tahoma,helvetica,verdana,lucida console,utopia; FONT-SIZE: 13pt }
+  FONT.layer {	COLOR: #ff0000; FONT-FAMILY: courrier,sans-serif,arial,helvetica; FONT-SIZE: 11pt; TEXT-ALIGN: left }
+  TD.title {	BACKGROUND-COLOR: #A2B5CD; COLOR: #555555; FONT-FAMILY:                   tahoma,helvetica,verdana,lucida console,utopia; FONT-SIZE: 13pt; FONT-WEIGHT: bold; HEIGHT: 20px; TEXT-ALIGN: right }
+  TD.sub {	BACKGROUND-COLOR: #DCDCDC; COLOR: #555555; FONT-FAMILY:                   tahoma,helvetica,verdana,lucida console,utopia; FONT-SIZE: 13pt; FONT-WEIGHT: bold; HEIGHT: 18px; TEXT-ALIGN: left }
+  TD.content {	BACKGROUND-COLOR: white; COLOR: #000000; FONT-FAMILY:                   tahoma,arial,helvetica,verdana,lucida console,utopia; FONT-SIZE: 11pt; TEXT-ALIGN: left; VERTICAL-ALIGN: middle }
+  TD.default {	BACKGROUND-COLOR: WHITE; COLOR: #000000; FONT-FAMILY:                   tahoma,arial,helvetica,verdana,lucida console,utopia; FONT-SIZE: 11pt; }
+  TD.border {	BACKGROUND-COLOR: #cccccc; COLOR: black; FONT-FAMILY:                   tahoma,helvetica,verdana,lucida console,utopia; FONT-SIZE: 13pt; HEIGHT: 25px }
+  TD.border-HILIGHT {	BACKGROUND-COLOR: #ffffcc; COLOR: black; FONT-FAMILY:                   verdana,arial,helvetica,lucida console,utopia; FONT-SIZE: 13pt; HEIGHT: 25px }
+-->
+//-->
+</STYLE>
+</HEAD>
+<BODY BGCOLOR=white>
+<table bgcolor="#a1a1a1" cellpadding=0 cellspacing=0 border=0 width="30%">
+                <tbody> <tr><td>
+                <table cellpadding=2 cellspacing=1 border=0 width="100%">
+                <td class=title colspan=3>w3af target URL's</td>
+                </tr>
+                <tr>
+                    <td class=sub width="100%">URL</td>
+                </tr><tr><td class=default width="100%">http://localhost/dvwa<br/>
+</td></tr></td></tr></tbody></table></td></tr></tbody></table><br><table bgcolor="#a1a1a1" cellpadding=0 cellspacing=0 border=0 width="75%">
+                <tbody> <tr><td>
+                <table cellpadding=2 cellspacing=1 border=0 width="100%">
+                <td class=title colspan=3>Security Issues</td>
+                </tr>
+                <tr>
+                    <td class=sub width="10%">Type</td>
+                    <td class=sub width="10%">Port</td>
+                    <td class=sub width="80%">Issue </td>
+                </tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">OS Commanding was found at: "http://localhost/dvwa/vulnerabilities/exec/", using HTTP method POST. The sent post-data was: "ip=&amp;Submit=Submit". This vulnerability was found in the requests with ids 2412, 2416, 2420 and 2424.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/exec/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/instructions.php", using HTTP method GET. The sent data was: "doc=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3019 to 3021.<br/><br/><b>URL :</b> http://localhost/dvwa/instructions.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/security.php", using HTTP method GET. The sent data was: "test=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3025 to 3027.<br/><br/><b>URL :</b> http://localhost/dvwa/security.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/xss_r/", using HTTP method GET. The sent data was: "name=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3031 to 3033.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_r/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/captcha/", using HTTP method POST. The sent post-data was: "...step=d'kc"z'gj'"**5*(((;-*`)...". This vulnerability was found in the requests with ids 3035 to 3037.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/captcha/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/brute/", using HTTP method GET. The sent data was: "username=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29&amp;password=". The modified parameter was "username". This vulnerability was found in the requests with ids 3051 to 3053.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/brute/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/brute/", using HTTP method GET. The sent data was: "username=&amp;password=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". The modified parameter was "password". This vulnerability was found in the requests with ids 3051, 3055 to 3056.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/brute/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/security.php", using HTTP method GET. The sent data was: "phpids=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3064, 3066 to 3067.<br/><br/><b>URL :</b> http://localhost/dvwa/security.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/csrf/", using HTTP method GET. The sent data was: "password_new=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29&amp;password_conf=". The modified parameter was "password_new". This vulnerability was found in the requests with ids 3076 to 3078.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/csrf/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/csrf/", using HTTP method GET. The sent data was: "password_new=&amp;password_conf=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". The modified parameter was "password_conf". This vulnerability was found in the requests with ids 3076, 3080 to 3081.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/csrf/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/sqli/", using HTTP method GET. The sent data was: "id=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3085 to 3087.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/sqli/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/security.php", using HTTP method POST. The sent post-data was: "user_token=ee33ff42af42e65d762367a9112a4db0&amp;security=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)&amp;seclev_submit=Submit". The modified parameter was "security". This vulnerability was found in the requests with ids 3094, 3096 to 3097.<br/><br/><b>URL :</b> http://localhost/dvwa/security.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/security.php", using HTTP method POST. The sent post-data was: "user_token=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)&amp;security=impossible&amp;seclev_submit=Submit". The modified parameter was "user_token". This vulnerability was found in the requests with ids 3094, 3101 to 3102.<br/><br/><b>URL :</b> http://localhost/dvwa/security.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/upload/", using HTTP method POST. The sent post-data was: "MAX_FILE_SIZE=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)&amp;uploaded=&amp;Upload=Upload". The modified parameter was "MAX_FILE_SIZE". This vulnerability was found in the requests with ids 3109 to 3111.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/upload/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/upload/", using HTTP method POST. The sent data was: "MAX_FILE_SIZE=100000&amp;uploaded=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)&amp;Upload=Upload". The modified parameter was the file content with value: "uploaded". This vulnerability was found in the requests with ids 3109, 3113 to 3114.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/upload/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/setup.php", using HTTP method POST. The sent post-data was: "user_token=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)&amp;create_db=Create%20/%20Reset%20Database". This vulnerability was found in the requests with ids 3126, 3128 to 3129.<br/><br/><b>URL :</b> http://localhost/dvwa/setup.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/exec/", using HTTP method POST. The sent post-data was: "ip=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)&amp;Submit=Submit". This vulnerability was found in the requests with ids 3136 to 3138.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/exec/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/xss_s/", using HTTP method POST. The sent post-data was: "btnSign=Sign%20Guestbook&amp;mtxMessage=22&amp;txtName=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)". The modified parameter was "txtName". This vulnerability was found in the requests with ids 3142 to 3144.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_s/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/xss_s/", using HTTP method POST. The sent post-data was: "btnSign=Sign%20Guestbook&amp;mtxMessage=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)&amp;txtName=John". The modified parameter was "mtxMessage". This vulnerability was found in the requests with ids 3142, 3146 to 3147.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_s/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/fi/", using HTTP method GET. The sent data was: "page=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3169 to 3171.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/fi/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/xss_d/", using HTTP method GET. The sent data was: "default=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3174 to 3176.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_d/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/sqli_blind/", using HTTP method GET. The sent data was: "id=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3179 to 3181.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/sqli_blind/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/instructions.php", using HTTP method GET. The injectable parameter is: "doc". This vulnerability was found in the requests with ids 3195 to 3196.<br/><br/><b>URL :</b> http://localhost/dvwa/instructions.php<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/security.php", using HTTP method GET. The injectable parameter is: "test". This vulnerability was found in the requests with ids 3204 to 3205.<br/><br/><b>URL :</b> http://localhost/dvwa/security.php<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/xss_r/", using HTTP method GET. The injectable parameter is: "name". This vulnerability was found in the requests with ids 3270 to 3271.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_r/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/captcha/", using HTTP method POST. The injectable parameter is: "step". This vulnerability was found in the requests with ids 3279 to 3280.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/captcha/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/captcha/", using HTTP method POST. The injectable parameter is: "password_new". This vulnerability was found in the requests with ids 3288 to 3289.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/captcha/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/captcha/", using HTTP method POST. The injectable parameter is: "password_conf". This vulnerability was found in the requests with ids 3297 to 3298.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/captcha/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/captcha/", using HTTP method POST. The injectable parameter is: "recaptcha_challenge_field". This vulnerability was found in the requests with ids 3306 to 3307.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/captcha/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/captcha/", using HTTP method POST. The injectable parameter is: "recaptcha_response_field". This vulnerability was found in the requests with ids 3315 to 3316.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/captcha/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/brute/", using HTTP method GET. The injectable parameter is: "username". This vulnerability was found in the requests with ids 3324 to 3325.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/brute/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/brute/", using HTTP method GET. The injectable parameter is: "password". This vulnerability was found in the requests with ids 3333 to 3334.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/brute/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/security.php", using HTTP method GET. The injectable parameter is: "phpids". This vulnerability was found in the requests with ids 3344 and 3346.<br/><br/><b>URL :</b> http://localhost/dvwa/security.php<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/csrf/", using HTTP method GET. The injectable parameter is: "password_new". This vulnerability was found in the requests with ids 3468 to 3469.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/csrf/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/csrf/", using HTTP method GET. The injectable parameter is: "password_conf". This vulnerability was found in the requests with ids 3477 to 3478.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/csrf/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/sqli/", using HTTP method GET. The injectable parameter is: "id". This vulnerability was found in the requests with ids 3486 to 3487.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/sqli/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/security.php", using HTTP method POST. The injectable parameter is: "security". This vulnerability was found in the requests with ids 3497 and 3499.<br/><br/><b>URL :</b> http://localhost/dvwa/security.php<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/security.php", using HTTP method POST. The injectable parameter is: "user_token". This vulnerability was found in the requests with ids 3509 and 3511.<br/><br/><b>URL :</b> http://localhost/dvwa/security.php<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/upload/", using HTTP method POST. The injectable parameter is: "MAX_FILE_SIZE". This vulnerability was found in the requests with ids 3519 to 3520.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/upload/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/upload/", using HTTP method POST. The injectable parameter is: "uploaded". This vulnerability was found in the requests with ids 3528 to 3529.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/upload/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/setup.php", using HTTP method POST. The injectable parameter is: "user_token". This vulnerability was found in the requests with ids 3896 and 3898.<br/><br/><b>URL :</b> http://localhost/dvwa/setup.php<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/exec/", using HTTP method POST. The injectable parameter is: "ip". This vulnerability was found in the requests with ids 3906 to 3907.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/exec/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/xss_s/", using HTTP method POST. The injectable parameter is: "txtName". This vulnerability was found in the requests with ids 3915 to 3916.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_s/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/xss_s/", using HTTP method POST. The injectable parameter is: "mtxMessage". This vulnerability was found in the requests with ids 3924 to 3925.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_s/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/fi/", using HTTP method GET. The injectable parameter is: "page". This vulnerability was found in the requests with ids 4398 to 4399.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/fi/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/xss_d/", using HTTP method GET. The injectable parameter is: "default". This vulnerability was found in the requests with ids 4407 to 4408.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_d/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/sqli_blind/", using HTTP method GET. The injectable parameter is: "id". This vulnerability was found in the requests with ids 4416 to 4417.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/sqli_blind/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">Local File Inclusion was found at: "http://localhost/dvwa/vulnerabilities/fi/", using HTTP method GET. The sent data was: "page=%2Fetc%2Fpasswd". This vulnerability was found in the request with id 4819.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/fi/<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">SQL injection in a MySQL database was found at: "http://localhost/dvwa/vulnerabilities/brute/", using HTTP method GET. The sent data was: "username=d%27z%220&amp;password=". The modified parameter was "username". This vulnerability was found in the request with id 5147.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/brute/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">SQL injection in a MySQL database was found at: "http://localhost/dvwa/vulnerabilities/sqli/", using HTTP method GET. The sent data was: "id=d%27z%220". This vulnerability was found in the request with id 5172.<br/><br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/sqli/<br>
+Severity : High<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 10735.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 748.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 743.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 1016.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 719.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 747.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 5109.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 10713.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 1018.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 3168.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 721.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 4822.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 5249.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 3173.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 734.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 746.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 2925.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 2882.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 5252.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 5103.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 4813.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                <td valign=top class=default width="10%"><font color=red>Vulnerability</font></td>
+                <td valign=top class=default width="10%">tcp/80</td>
+                <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 732.<br/><br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br>
+Severity : Medium<br> 
+</td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">OS Commanding was found at: "http://localhost/dvwa/vulnerabilities/exec/", using HTTP method POST. The sent post-data was: "ip=&amp;Submit=Submit". This vulnerability was found in the requests with ids 2412, 2416, 2420 and 2424.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/exec/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/instructions.php", using HTTP method GET. The sent data was: "doc=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3019 to 3021.<br>
+<br/><b>URL :</b> http://localhost/dvwa/instructions.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/security.php", using HTTP method GET. The sent data was: "test=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3025 to 3027.<br>
+<br/><b>URL :</b> http://localhost/dvwa/security.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/xss_r/", using HTTP method GET. The sent data was: "name=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3031 to 3033.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_r/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/captcha/", using HTTP method POST. The sent post-data was: "...step=d'kc"z'gj'"**5*(((;-*`)...". This vulnerability was found in the requests with ids 3035 to 3037.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/captcha/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/brute/", using HTTP method GET. The sent data was: "username=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29&amp;password=". The modified parameter was "username". This vulnerability was found in the requests with ids 3051 to 3053.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/brute/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/brute/", using HTTP method GET. The sent data was: "username=&amp;password=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". The modified parameter was "password". This vulnerability was found in the requests with ids 3051, 3055 to 3056.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/brute/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/security.php", using HTTP method GET. The sent data was: "phpids=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3064, 3066 to 3067.<br>
+<br/><b>URL :</b> http://localhost/dvwa/security.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/csrf/", using HTTP method GET. The sent data was: "password_new=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29&amp;password_conf=". The modified parameter was "password_new". This vulnerability was found in the requests with ids 3076 to 3078.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/csrf/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/csrf/", using HTTP method GET. The sent data was: "password_new=&amp;password_conf=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". The modified parameter was "password_conf". This vulnerability was found in the requests with ids 3076, 3080 to 3081.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/csrf/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/sqli/", using HTTP method GET. The sent data was: "id=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3085 to 3087.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/sqli/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/security.php", using HTTP method POST. The sent post-data was: "user_token=ee33ff42af42e65d762367a9112a4db0&amp;security=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)&amp;seclev_submit=Submit". The modified parameter was "security". This vulnerability was found in the requests with ids 3094, 3096 to 3097.<br>
+<br/><b>URL :</b> http://localhost/dvwa/security.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/security.php", using HTTP method POST. The sent post-data was: "user_token=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)&amp;security=impossible&amp;seclev_submit=Submit". The modified parameter was "user_token". This vulnerability was found in the requests with ids 3094, 3101 to 3102.<br>
+<br/><b>URL :</b> http://localhost/dvwa/security.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/upload/", using HTTP method POST. The sent post-data was: "MAX_FILE_SIZE=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)&amp;uploaded=&amp;Upload=Upload". The modified parameter was "MAX_FILE_SIZE". This vulnerability was found in the requests with ids 3109 to 3111.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/upload/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/upload/", using HTTP method POST. The sent data was: "MAX_FILE_SIZE=100000&amp;uploaded=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)&amp;Upload=Upload". The modified parameter was the file content with value: "uploaded". This vulnerability was found in the requests with ids 3109, 3113 to 3114.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/upload/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/setup.php", using HTTP method POST. The sent post-data was: "user_token=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)&amp;create_db=Create%20/%20Reset%20Database". This vulnerability was found in the requests with ids 3126, 3128 to 3129.<br>
+<br/><b>URL :</b> http://localhost/dvwa/setup.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/exec/", using HTTP method POST. The sent post-data was: "ip=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)&amp;Submit=Submit". This vulnerability was found in the requests with ids 3136 to 3138.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/exec/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/xss_s/", using HTTP method POST. The sent post-data was: "btnSign=Sign%20Guestbook&amp;mtxMessage=22&amp;txtName=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)". The modified parameter was "txtName". This vulnerability was found in the requests with ids 3142 to 3144.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_s/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/xss_s/", using HTTP method POST. The sent post-data was: "btnSign=Sign%20Guestbook&amp;mtxMessage=d'kc"z'gj'"%2A%2A5%2A(((%3B-%2A%60)&amp;txtName=John". The modified parameter was "mtxMessage". This vulnerability was found in the requests with ids 3142, 3146 to 3147.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_s/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/fi/", using HTTP method GET. The sent data was: "page=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3169 to 3171.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/fi/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/xss_d/", using HTTP method GET. The sent data was: "default=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3174 to 3176.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_d/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified vulnerability was found at: "http://localhost/dvwa/vulnerabilities/sqli_blind/", using HTTP method GET. The sent data was: "id=d%27kc%22z%27gj%27%22%2A%2A5%2A%28%28%28%3B-%2A%60%29". This vulnerability was found in the requests with ids 3179 to 3181.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/sqli_blind/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/instructions.php", using HTTP method GET. The injectable parameter is: "doc". This vulnerability was found in the requests with ids 3195 to 3196.<br>
+<br/><b>URL :</b> http://localhost/dvwa/instructions.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/security.php", using HTTP method GET. The injectable parameter is: "test". This vulnerability was found in the requests with ids 3204 to 3205.<br>
+<br/><b>URL :</b> http://localhost/dvwa/security.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/xss_r/", using HTTP method GET. The injectable parameter is: "name". This vulnerability was found in the requests with ids 3270 to 3271.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_r/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/captcha/", using HTTP method POST. The injectable parameter is: "step". This vulnerability was found in the requests with ids 3279 to 3280.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/captcha/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/captcha/", using HTTP method POST. The injectable parameter is: "password_new". This vulnerability was found in the requests with ids 3288 to 3289.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/captcha/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/captcha/", using HTTP method POST. The injectable parameter is: "password_conf". This vulnerability was found in the requests with ids 3297 to 3298.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/captcha/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/captcha/", using HTTP method POST. The injectable parameter is: "recaptcha_challenge_field". This vulnerability was found in the requests with ids 3306 to 3307.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/captcha/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/captcha/", using HTTP method POST. The injectable parameter is: "recaptcha_response_field". This vulnerability was found in the requests with ids 3315 to 3316.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/captcha/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/brute/", using HTTP method GET. The injectable parameter is: "username". This vulnerability was found in the requests with ids 3324 to 3325.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/brute/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/brute/", using HTTP method GET. The injectable parameter is: "password". This vulnerability was found in the requests with ids 3333 to 3334.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/brute/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/security.php", using HTTP method GET. The injectable parameter is: "phpids". This vulnerability was found in the requests with ids 3344 and 3346.<br>
+<br/><b>URL :</b> http://localhost/dvwa/security.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/csrf/", using HTTP method GET. The injectable parameter is: "password_new". This vulnerability was found in the requests with ids 3468 to 3469.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/csrf/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/csrf/", using HTTP method GET. The injectable parameter is: "password_conf". This vulnerability was found in the requests with ids 3477 to 3478.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/csrf/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/sqli/", using HTTP method GET. The injectable parameter is: "id". This vulnerability was found in the requests with ids 3486 to 3487.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/sqli/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/security.php", using HTTP method POST. The injectable parameter is: "security". This vulnerability was found in the requests with ids 3497 and 3499.<br>
+<br/><b>URL :</b> http://localhost/dvwa/security.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/security.php", using HTTP method POST. The injectable parameter is: "user_token". This vulnerability was found in the requests with ids 3509 and 3511.<br>
+<br/><b>URL :</b> http://localhost/dvwa/security.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/upload/", using HTTP method POST. The injectable parameter is: "MAX_FILE_SIZE". This vulnerability was found in the requests with ids 3519 to 3520.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/upload/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/upload/", using HTTP method POST. The injectable parameter is: "uploaded". This vulnerability was found in the requests with ids 3528 to 3529.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/upload/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/setup.php", using HTTP method POST. The injectable parameter is: "user_token". This vulnerability was found in the requests with ids 3896 and 3898.<br>
+<br/><b>URL :</b> http://localhost/dvwa/setup.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/exec/", using HTTP method POST. The injectable parameter is: "ip". This vulnerability was found in the requests with ids 3906 to 3907.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/exec/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/xss_s/", using HTTP method POST. The injectable parameter is: "txtName". This vulnerability was found in the requests with ids 3915 to 3916.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_s/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/xss_s/", using HTTP method POST. The injectable parameter is: "mtxMessage". This vulnerability was found in the requests with ids 3924 to 3925.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_s/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/fi/", using HTTP method GET. The injectable parameter is: "page". This vulnerability was found in the requests with ids 4398 to 4399.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/fi/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/xss_d/", using HTTP method GET. The injectable parameter is: "default". This vulnerability was found in the requests with ids 4407 to 4408.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/xss_d/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Blind SQL injection was found at: "http://localhost/dvwa/vulnerabilities/sqli_blind/", using HTTP method GET. The injectable parameter is: "id". This vulnerability was found in the requests with ids 4416 to 4417.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/sqli_blind/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">Local File Inclusion was found at: "http://localhost/dvwa/vulnerabilities/fi/", using HTTP method GET. The sent data was: "page=%2Fetc%2Fpasswd". This vulnerability was found in the request with id 4819.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/fi/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">SQL injection in a MySQL database was found at: "http://localhost/dvwa/vulnerabilities/brute/", using HTTP method GET. The sent data was: "username=d%27z%220&amp;password=". The modified parameter was "username". This vulnerability was found in the request with id 5147.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/brute/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">SQL injection in a MySQL database was found at: "http://localhost/dvwa/vulnerabilities/sqli/", using HTTP method GET. The sent data was: "id=d%27z%220". This vulnerability was found in the request with id 5172.<br>
+<br/><b>URL :</b> http://localhost/dvwa/vulnerabilities/sqli/<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 10735.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 748.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 743.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 1016.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 719.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 747.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 5109.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 10713.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 1018.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 3168.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 721.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 4822.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 5249.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 3173.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 734.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 746.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 2925.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 2882.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 5252.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 5103.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 4813.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/PGSQL.php<br> 
+ </td></tr><tr>
+                    <td valign=top class=default width="10%">
+                        <font color=blue>Information</font>
+                    </td>
+                    <td valign=top class=default width="10%">tcp/80</td>
+                    <td class=default width="80%">An unidentified web application error (HTTP response code 500) was found at: "http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php". Enable all plugins and try again, if the vulnerability still is not identified, please verify manually and report it to the w3af developers. This vulnerability was found in the request with id 732.<br>
+<br/><b>URL :</b> http://localhost/dvwa/dvwa/includes/DBMS/MySQL.php<br> 
+ </td></tr></td></tr></tbody></table></td></tr></tbody></table><br/>
+
+<table bgcolor="#a1a1a1" cellpadding=0 cellspacing=0 border=0 width="75%">
+                <tbody> <tr><td>
+                <table cellpadding=2 cellspacing=1 border=0 width="100%">
+                <td class=title colspan=3>Security Issues</td>
+                </tr>
+                <tr>
+                    <td class=sub width="20%">Time</td>
+                    <td class=sub width="10%">Message type</td>
+                    <td class=sub width="70%">Message</td>
+                </tr><tr><td class=content>dim. 10 déc. 2017 14:42:12 CET</td><td class=content>debug</td><td class=content><i>Enabled plugins</i>:
+ <br/><br/>plugins<br/>&nbsp;&nbsp;&nbsp;&nbsp;audit&nbsp;xss,&nbsp;osCommanding,&nbsp;generic,&nbsp;blindSqli,&nbsp;localFileInclude,&nbsp;formatString,&nbsp;sqli,&nbsp;fileUpload,&nbsp;eval,&nbsp;responseSplitting<br/>&nbsp;&nbsp;&nbsp;&nbsp;back<br/>plugins<br/>&nbsp;&nbsp;&nbsp;&nbsp;grep&nbsp;error500<br/>&nbsp;&nbsp;&nbsp;&nbsp;back<br/>plugins<br/>&nbsp;&nbsp;&nbsp;&nbsp;output&nbsp;htmlFile,&nbsp;xmlFile,&nbsp;console,&nbsp;csv_file<br/>&nbsp;&nbsp;&nbsp;&nbsp;output&nbsp;config&nbsp;htmlFile<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;fileName&nbsp;/home/ach0210s/Documents/w3af/report.html<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;verbose&nbsp;False<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;back<br/>&nbsp;&nbsp;&nbsp;&nbsp;output&nbsp;config&nbsp;xmlFile<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;fileName&nbsp;/home/ach0210s/Documents/w3af/report.xml<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;back<br/>&nbsp;&nbsp;&nbsp;&nbsp;output&nbsp;config&nbsp;csv_file<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;output_file&nbsp;/home/ach0210s/Documents/w3af/report.csv<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;back<br/>&nbsp;&nbsp;&nbsp;&nbsp;back<br/>plugins<br/>&nbsp;&nbsp;&nbsp;&nbsp;discovery&nbsp;webSpider<br/>&nbsp;&nbsp;&nbsp;&nbsp;discovery&nbsp;config&nbsp;webSpider<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;onlyForward&nbsp;False<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;followRegex&nbsp;.*<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;ignoreRegex&nbsp;.*logout.*<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;back<br/>&nbsp;&nbsp;&nbsp;&nbsp;back<br/>target<br/>&nbsp;&nbsp;&nbsp;&nbsp;set&nbsp;target&nbsp;http://localhost/dvwa<br/>&nbsp;&nbsp;&nbsp;&nbsp;back<br/>
+</td></tr>
+<tr><td class=content>dim. 10 déc. 2017 14:43:15 CET</td><td class=content>console</td><td class=content>Status: Running audit.osCommanding on http://localhost/dvwa/vulnerabilities/exec/ | Method: POST | Parameters: (ip="").
+Current phase status: 16.21 % - ETA: 00d 00h 04m 42s</td></tr>
+</td></tr></tbody></table></td></tr></tbody></table><br/>
+
+</BODY>
+</HTML>
