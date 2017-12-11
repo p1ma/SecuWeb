@@ -13,7 +13,7 @@ echo "Cookie: security=low;PHPSESSID=${1}" > ${HEADERS_FILE}
 
 echo > ${WA3F_SCRIPT}
 echo target >> ${WA3F_SCRIPT}
-echo set target http://localhost/dvwa >> ${WA3F_SCRIPT}
+echo set target http://nosari20.synology.me/dvwa >> ${WA3F_SCRIPT}
 echo set targetOS unix >> ${WA3F_SCRIPT}
 echo set targetFramework php >> ${WA3F_SCRIPT}
 echo back >> ${WA3F_SCRIPT}
@@ -26,15 +26,15 @@ echo back >> ${WA3F_SCRIPT}
 #echo discovery dir_bruter >> ${WA3F_SCRIPT}
 #echo discovery urlFuzzer >> ${WA3F_SCRIPT}
 
-echo audit blindSqli >> ${WA3F_SCRIPT}
-echo audit eval >> ${WA3F_SCRIPT}
-echo audit fileUpload >> ${WA3F_SCRIPT}
-echo audit formatString >> ${WA3F_SCRIPT}
-echo audit generic >> ${WA3F_SCRIPT}
-echo audit localFileInclude >> ${WA3F_SCRIPT}
+#echo audit blindSqli >> ${WA3F_SCRIPT}
+#echo audit eval >> ${WA3F_SCRIPT}
+#echo audit fileUpload >> ${WA3F_SCRIPT}
+#echo audit formatString >> ${WA3F_SCRIPT}
+#echo audit generic >> ${WA3F_SCRIPT}
+#echo audit localFileInclude >> ${WA3F_SCRIPT}
 echo audit osCommanding >> ${WA3F_SCRIPT}
 #echo audit remoteFileInclude >> ${WA3F_SCRIPT}
-echo audit responseSplitting >> ${WA3F_SCRIPT}
+#echo audit responseSplitting >> ${WA3F_SCRIPT}
 echo audit sqli >> ${WA3F_SCRIPT}
 echo audit xss >> ${WA3F_SCRIPT}
 
@@ -60,3 +60,4 @@ echo start >> ${WA3F_SCRIPT}
 echo exit  >> ${WA3F_SCRIPT}
 
 w3af_console -s ${WA3F_SCRIPT}
+
