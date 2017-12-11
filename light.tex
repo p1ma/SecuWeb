@@ -108,7 +108,7 @@
 		\item Objectif \\
 		      $\rightarrow$ \colorized{vérifier des vulnérabilités de l'OWASP TOP 10}
 		\item Porté \\
-		      $\rightarrow$ \colorized{application web (en local)}
+		      $\rightarrow$ \colorized{application web DVWA (en local)}
 		\item Méthodes (boite blanche/grise/noire) \\
 		      $\rightarrow$ \colorized{boite blanche}
 		\item Demandes techniques et administratives \\
@@ -136,7 +136,6 @@
 			\item Injection
 			\item Violation de gestion d'authentification et de session
 			\item Cross-Site Scripting (XSS) 
-			\item Violation de contrôle d’accès
 		\end{enumerate}
 	\end{block}
 \end{frame}
@@ -146,7 +145,7 @@
 	Suivant les objectifs  définis, on choisit une/des méthode(s) d'audit
 	\begin{itemize}
 		\item Audit organisationnel
-		\item Tests d'intrusion (fuzzing)				
+		\item Tests d'intrusion 			
 		\item Revue de code source
 		\item Relevés de configuration
 		\item Analyse d'architecture	
@@ -157,8 +156,9 @@
 	\begin{itemize}
 		\item Revue de code source
 		\item Relevés de configuration
-		\item Tests d'intrusion (fuzzing)
 	\end{itemize}
+	$\newline$
+	+ Tests d'intrusion
 	$\newline$
 	$\newline$
 	\colorized{L'ANSSI recommande de ne jamais faire uniquement les tests d'intrusion}
@@ -179,7 +179,7 @@
 			\centering
 			\includegraphics[width=.4\linewidth]{schemas/images/brain.png}
 			\break 
-			Logique humaine
+			Raisonnement humain
 		\end{minipage}
 		\begin{minipage}{.3\textwidth}
 			\centering
@@ -199,13 +199,13 @@
 \centering
 \includegraphics[width=0.95\paperwidth ]{schemas/images/broken_auth.png}
 \end{frame}
-\begin{frame}{Violation de contrôle d’accès}
-\centering
-\includegraphics[width=\paperwidth ]{schemas/images/broken_ac.png}
-\end{frame}
 \begin{frame}{Cross-Site Scripting (XSS)}
 \centering
 \includegraphics[width=0.92\paperwidth ]{schemas/images/XSS.png}
+\end{frame}
+\begin{frame}{Démonstrations}
+\centering
+\includegraphics[width=0.92\paperwidth ]{schemas/images/showtime.jpg}
 \end{frame}
 
 \section{Conclure un audit}	
