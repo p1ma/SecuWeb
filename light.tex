@@ -74,8 +74,8 @@
 	\begin{block}{Audit de sécurité}
 		\begin{itemize}
 			\item Vue à un instant T de la sécurité d'un système
-			\item Pratique encadré (lois, réglementations, normes ISO 19011/27001)
-			\item Objectif d'identifier et d'évaluer de potentiels vulnérabilités
+			\item Pratique encadrée (lois, réglementations, normes ISO 19011/27001)
+			\item Objectif d'identifier et d'évaluer de potentielles vulnérabilités
 			\item Établir des recommendations, corrections
 		\end{itemize}
 	\end{block}
@@ -95,7 +95,7 @@
 	Contact audité-auditeur : 
 	\begin{itemize}
 		\item Objectif
-		\item Porté 
+		\item Portée 
 		\item Méthodes (boite blanche/grise/noire) 
 		\item Demandes techniques et administratives 
 		\item Définition des échéances 
@@ -108,7 +108,7 @@
 	\begin{itemize}
 		\item Objectif \\
 		      $\rightarrow$ \colorized{vérifier des vulnérabilités de l'OWASP TOP 10}
-		\item Porté \\
+		\item Portée \\
 		      $\rightarrow$ \colorized{application web DVWA (en local)}
 		\item Méthodes (boite blanche/grise/noire) \\
 		      $\rightarrow$ \colorized{boite blanche}
@@ -210,6 +210,99 @@
 \includegraphics[width=0.92\paperwidth ]{schemas/images/showtime.jpg}
 \end{frame}
 
+\begin{frame}{OWASP ZAP - Revue de code}
+
+\begin{center}
+	\includemedia[
+	width=1\linewidth,
+	height=0.5\linewidth,
+	activate=pageopen,
+	addresource=videos/OWASP-RevueCode.mp4,
+	flashvars={source=videos/OWASP-RevueCode.mp4}
+	]{}{VPlayer.swf}
+	
+\end{center} 
+
+\end{frame}
+
+\begin{frame}{OWASP ZAP - Zed Attack Proxy}
+\begin{block}{Présentation}
+	\begin{itemize}
+		\item Projet open source \href{https://github.com/zaproxy/zaproxy/}{\beamergotobutton{https://github.com/zaproxy/zaproxy}}
+		\item Pentesting manuel (Modification de requêtes, fuzzing d'URL avec les bases de donnés de payloads)
+		\item Pentesting automatisé (crawl, fuzzing sur tout les URL trouvés) 
+		\item Interface graphique
+	\end{itemize}	
+\end{block}
+\end{frame}
+
+
+
+\begin{frame}{OWASP ZAP - Injection}
+\begin{center}
+	\includemedia[
+	width=1\linewidth,
+	height=0.5\linewidth,
+	activate=pageopen,
+	addresource=videos/OWASP_INJECTION.mp4,
+	flashvars={source=videos/OWASP_INJECTION.mp4}
+	]{}{VPlayer.swf}	
+\end{center} 
+\end{frame}
+
+\begin{frame}{OWASP ZAP - Session hijacking (XSS)}
+	\begin{center}
+		\includemedia[
+		width=1\linewidth,
+		height=0.5\linewidth,
+		activate=pageopen,
+		addresource=videos/XSS_ADMIN.mp4,
+		flashvars={source=videos/XSS_ADMIN.mp4}
+		]{}{VPlayer.swf}	
+	\end{center} 
+\end{frame}
+
+\begin{frame}{OWASP ZAP - Revue de code}
+	\begin{center}
+		\includemedia[
+		width=1\linewidth,
+		height=0.5\linewidth,
+		activate=pageopen,
+		addresource=videos/OWASP-RevueCode.mp4,
+		flashvars={source=videos/OWASP-RevueCode.mp4}
+		]{}{VPlayer.swf}	
+	\end{center} 
+\end{frame}
+
+
+\begin{frame}{ W3AF - Web application attack and audit framework}
+\begin{block}{Présentation}
+	\begin{itemize}
+		\item Projet open source \href{http://w3af.org/}{\beamergotobutton{http://w3af.org/}}
+		\item Core (Partage les donnés entre les plugins)
+		\item Plugins (Discovery, Audit, Grep, Attack, Output, Mangle, Evasion et Bruteforce)
+		\item Interface graphique / Console
+	\end{itemize}	
+\end{block}
+\end{frame}
+
+\begin{frame}{ W3AF - Configuration}
+\centering
+\includegraphics[height=0.63\paperwidth ]{schemas/images/w3af_script.png}
+\end{frame}
+
+\begin{frame}{W3AF - Audit}
+	\begin{center}
+		\includemedia[
+		width=1\linewidth,
+		height=0.5\linewidth,
+		activate=pageopen,
+		addresource=videos/W3AF_AUDIT.mp4,
+		flashvars={source=videos/W3AF_AUDIT.mp4}
+		]{}{VPlayer.swf}	
+	\end{center} 
+\end{frame}
+
 \section{Conclure un audit}	
 \subsection{Elaboration du rapport d'audit} 
 \begin{frame}{Elaboration du rapport d'audit}
@@ -219,7 +312,7 @@
 			\item Compréhensible par des non experts
 			\item La liste des vulnérabilités trouvées
 			\item La liste des mesures correctives proposées
-			\item Déroulement des tests d'intrusion et méthodologie employés
+			\item Déroulement des tests d'intrusion et méthodologie employée
 			\item Mention des imprévues
 		\end{itemize}
 	\end{block}
@@ -232,7 +325,7 @@
 	\begin{itemize}
 		\item Réunion audité-auditeur
 		\item Audité $\rightarrow$ certifier l'état de sécurité de son système
-		\item Auditeur $\rightarrow$ restituer ou detruire les traces de l'audit
+		\item Auditeur $\rightarrow$ restituer ou détruire les traces de l'audit
 		\item Audit de validation ?
 	\end{itemize}
 \end{frame}
@@ -259,22 +352,6 @@
 
 
 
-\begin{frame}{Umpire Decision Review System}
 
-\begin{center}
-	\includemedia[
-	width=1\linewidth,
-	height=0.5\linewidth,
-	activate=pageopen,
-	addresource=videos/OWASP-RevueCode.mp4,
-	flashvars={source=videos/OWASP-RevueCode.mp4}
-	]{cliquer ici}{VPlayer.swf}
-	
-\end{center} 
-
-
-
-
-\end{frame}
 
 \end{document}
